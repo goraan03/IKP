@@ -1,0 +1,22 @@
+# Visual Studio fajlovi koje ne treba pratiti
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Bin/obj direktorijumi
+[Bb]in/
+[Oo]bj/
+x64/
+x86/
+
+# Debug fajlovi
+*.pdb
+*.idb
+*.ilk
+
+# Build output
+*.exe
+*.dll
+*.log
