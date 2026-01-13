@@ -123,7 +123,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Memory Management.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Heap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Heap.h" />
+    <ClInclude Include="include\MemoryBlock.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
