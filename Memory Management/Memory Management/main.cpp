@@ -1,27 +1,23 @@
 #include <iostream>
-#include "include/Heap.h"
+#include "include/AdvancedHeapManager.h"
 
 int main() {
+    const size_t HEAP_COUNT = 3;
     const size_t HEAP_SIZE = 1024 * 1024; // 1 MB heap
-    Heap heap(HEAP_SIZE);
+    
+    AdvancedHeapManager ahm(HEAP_COUNT, HEAP_SIZE);
 
-    std::cout << "=== Pocetno stanje ===";
-    heap.PrintState();
+    void* p1 = ahm.Malloc(200);
+    void* p2 = ahm.Malloc(400);
+    void* p3 = ahm.Malloc(1000);
+    void* p4 = ahm.Malloc(450);
 
-    void* a = heap.Alloc(256);
-    void* b = heap.Alloc(128);
-    void* c = heap.Alloc(512);
+    std::cout << "\n--- Nakon alokacije ---";
+    ahm.PrintHeaps();
 
-    std::cout << "\n=== Posle alokacija ===";
-    heap.PrintState();
-
-    heap.Free(b);
-    std::cout << "\n=== Nakon oslobadjanja bloka b ===";
-    heap.PrintState();
-
-    void* d = heap.Alloc(100);
-    std::cout << "\n=== Nakon nove alokacije d ===";
-    heap.PrintState();
+    ahm.Free(p2);
+    std::cout << "\n--- Nakon Free(p2) ---";
+    ahm.PrintHeaps();
 
     return 0;
 }

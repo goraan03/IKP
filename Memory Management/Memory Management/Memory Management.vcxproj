@@ -124,9 +124,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\AdvancedHeapManager.cpp" />
+    <ClCompile Include="src\DataStructures.cpp" />
     <ClCompile Include="src\Heap.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\AdvancedHeapManager.h" />
+    <ClInclude Include="include\DataStructures.h" />
     <ClInclude Include="include\Heap.h" />
     <ClInclude Include="include\MemoryBlock.h" />
   </ItemGroup>
