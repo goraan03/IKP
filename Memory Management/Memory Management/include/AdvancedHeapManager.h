@@ -2,6 +2,7 @@
 #define ADVANCEDHEAPMANAGER_H
 
 #include <cstddef>
+#include <mutex>
 #include "Heap.h"
 #include "DataStructures.h"
 
@@ -20,6 +21,9 @@ private:
     size_t heapSize;
     HashMap ptrMap;
     size_t* usedMemory;
+
+    mutable std::mutex globalLock;
+    std::mutex* heapLocks;
 
     size_t GetLeastUsedHeap() const;
 };

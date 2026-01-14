@@ -127,12 +127,14 @@
     <ClCompile Include="src\AdvancedHeapManager.cpp" />
     <ClCompile Include="src\DataStructures.cpp" />
     <ClCompile Include="src\Heap.cpp" />
+    <ClCompile Include="src\ThreadPool.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AdvancedHeapManager.h" />
     <ClInclude Include="include\DataStructures.h" />
     <ClInclude Include="include\Heap.h" />
     <ClInclude Include="include\MemoryBlock.h" />
+    <ClInclude Include="include\ThreadPool.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
